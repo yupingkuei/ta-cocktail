@@ -1,3 +1,7 @@
+<h1>Welcome to the TA Cocktails</h1>
 <% @cocktails.each do |cocktail| %>
-  <%= cocktail.name %>
+  <%= link_to cocktail_path(cocktail) do %>
+    <h2><%= cocktail.name %></h2>
+  <% end %>
 <% end %>
+<%= link_to "Create a new cocktail", new_cocktail_path %>
